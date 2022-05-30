@@ -1,5 +1,5 @@
 ## Who am I?
-Hello, I'm Calin Baenen, a pansexual, enby, programmer born on October 30th, 2006.  
+Hello! I'm Calin Baenen, a pansexual, enby, programmer born on October 30th, 2006.  
 I enjoy playing games, helping people, and programming as my hobby and hope to make it my career.
 
 I work in programming languages such as [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), [JavaScript](https://en.wikipedia.org/wiki/JavaScript),

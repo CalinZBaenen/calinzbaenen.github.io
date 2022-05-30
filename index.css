@@ -1,4 +1,11 @@
-body, html {
+:root {     /* Define variables. */
+	--vindent:5.25vh;  /* Vertical indentation. */
+	--indent:5vw;      /* Horizontal indentation. */
+}
+
+
+
+body, html {     /* Display the document in flex to allow for full control of layout and sizing. */
 	background-color:#ffc8c8;
 	font-family:Arial, sans-serif;
 	font-size:large;
@@ -9,7 +16,7 @@ body, html {
 	min-width:100vw;
 }
 
-body {
+body {     /* Make the body follow a column structured layout. */
 	flex-direction:column;
 	padding-bottom:calc(20vh + 25px);
 	overflow-x:hidden;
@@ -17,8 +24,12 @@ body {
 }
 
 
-code { font-weight:bold; }
 
+table, td, th, tr {
+	border-color:#000000;
+	border-style:solid;
+	text-align:center;
+}
 
 table {
 	background-color:#f8f8f8;
@@ -27,11 +38,8 @@ table {
 	max-width:90%;
 }
 
-table, td, th, tr {
-	border-color:#000000;
-	border-style:solid;
-	text-align:center;
-}
+
+code { font-weight:bold; }
 
 
 div, ol, ul {
@@ -40,9 +48,18 @@ div, ol, ul {
 }
 
 
+h1, h2, h3, h4, h5, h6 { margin-bottom:0; }     /* Make headings closer to content. */
+
+:is(h1, h2, h3, h4, h5, h6) + :is(ol, ul, p) { margin-top:0; }     /* Make paragraphs closer to headings. */
+
+
+:is(ol.nocolor-url, ul.nocolor-url) a { color:#000000; }
+
+
 a {
-	max-height:fit-content;
-	max-width:fit-content;
+	-webkit-user-select:text;
+	-webkit-user-drag:none;
+	user-select:text;
 	
 	text-decoration:underline;
 	font-weight:medium;
@@ -53,38 +70,46 @@ a:hover {
 	text-decoration-style:double;
 }
 
-p, a {
-	text-overflow:wrap;
-}
 
+p, a {     /* Stop paragraphs and URLs from taking more room than they need. */
+	height:fit-content;
+	width:fit-content;
+}
+p.nocolor-url > a { color:#000000; }
+
+
+
+.no-markers ::marker {     /* Hide "markers" in list. (I.e. bullets and numbers in <ul>s and <ol>s.) */
+	visibility:hidden;
+	color:#00000000;
+}
 
 
 .hrect-simg {
 	height:7.5vh;
 	width:15vw;
 }
+
 .srect-simg {
 	height:calc(15vh + calc(1in / 3));
 	width:calc(10vw + calc(1in / 3));
 }
+
 .vrect-simg {
 	height:calc(15vh + calc(1in / 3));
 	width:7.5vw;
 }
 
-.no-markers ::marker {visibility:hidden; color:#00000000;}
 
-.center-text {
-	text-align:center;
-	margin:0;
-}
+.half-indent { margin-left:calc(var(--indent) / 2); }
 
-.vindent { margin-top:5.25vh; }
-.indent { margin-left:5vw; }
+
+.content, .indent { margin-left:var(--indent); }
+.content > div + div { margin-top:var(--vindent); }
 
 
 
-#top-bar {
+#top-bar {     /* The top bar is a unique element as it contains the logo and headings horizontally. */
 	background-color:#ffffff;
 	
 	align-items:center;
@@ -96,26 +121,30 @@ p, a {
 	height:fit-content;
 	width:100%;
 }
-#top-bar * { margin-left:calc(0.5vw + 10px); }
+#top-bar[style="justify-content:center;"] > *:first-child { margin-left:0 !important; }
+#top-bar > *:first-child { margin-left:1px !important; }
+#top-bar > * { margin-left:calc(0.5vw + 10px); }
+
 #top-bar div {
 	align-items:center;
+	margin-left:0 !important;
 	display:flex;
 	height:100%;
 	width:100%;
 }
-#top-bar a { -webkit-user-drag:none; }
-
-#top-bar img, .no-select {
+#top-bar img, .no-select {     /* Prevent selection of items. */
 	-webkit-user-select:none;
 	-webkit-user-drag:none;
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
 }
-#top-bar a, #top-bar a:visited, .nocolor-url,
-.nocolor-url:visited { color:black; }
-
-#top-bar .icon {
-	height:calc(7vh - 5px);
-	width:calc(7vw - 5px);
+#top-bar img {
+	height:calc(6.5vh - 5px);
+	width:calc(6.5vw - 5px);
 }
+#top-bar h2, .center-text {     /* Fully center the text. */
+	text-align:center;
+	margin:0;
+}
+#top-bar a, .nocolor-url { color:#000000; }
