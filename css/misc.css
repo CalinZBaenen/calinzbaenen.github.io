@@ -1,0 +1,62 @@
+/* Make anchors more visually accessible. */
+a {
+	text-decoration-thickness:1px;
+	text-decoration-line:underline;
+	font-weight:medium;
+	display:inline-flex;
+	cursor:pointer;
+	color:#2f2f5e;
+	
+	-webkit-user-drag:none;
+}
+
+a:visited { color:#8d2f8d; }
+
+a:focus {
+	text-decoration-style:double;
+	text-decoration-color:#dc530e9f;
+	outline:none;
+}
+
+a:focus, a:hover { color:#dc530e; }
+
+a:hover { text-decoration-style:double; }
+
+
+
+
+
+/*
+* Hide "markers" in lists.
+* (I.e. bullets and numbers in <ul>s and <ol>s.)
+*/
+.no-markers ::marker {
+	visibility:hidden;
+	display:none;
+	color:#00000000;
+}
+
+
+
+/* Disallows the user from selecting anything. */
+.no-select, .no-select > * {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+
+
+/* Only allows the user to select text. */
+.sel-txt-o, .sel-txt-o > * {
+	-webkit-user-select:text;
+	-moz-user-select:text;
+	-ms-user-select:text;
+	user-select:text;
+}
+
+
+
+/* Disable the dragging of things like images or selected text. */
+.no-drag, .no-drag > * { -webkit-user-drag:none; }

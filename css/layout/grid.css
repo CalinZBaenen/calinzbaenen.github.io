@@ -1,0 +1,17 @@
+/* Any element that wants to be a grid. */
+.grid {display:grid;}
+
+
+
+
+
+/* Give the body a layout, minimum size, and padding. */
+main#site-body {
+	grid-template-columns:1fr;
+	grid-template-rows:1fr;
+	display:grid;
+	
+	padding-bottom:calc(10vh + 20px);
+	min-height:calc(0.5vh + 5px);
+	height:fit-content;
+}

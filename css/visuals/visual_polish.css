@@ -1,0 +1,14 @@
+/* Make tables more visually appealing. */
+table {
+	background-color:#f3f3f3;
+	border-collapse:collapse;
+	border-width:2px;
+	overflow-x:scroll;
+	max-width:calc(97.25% - 4px);
+}
+
+/* Style the borders of table-related elements. */
+table, td, th, tr {
+	border-color:#010101;
+	border-style:solid;
+}

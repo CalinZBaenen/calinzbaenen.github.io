@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en-US" dir="ltr">
+	<head>
+		<!-- Document metadata. -->
+		<base href="./index.html"/>
+		
+		<meta http-equiv="content-type" charset="utf-8"
+			content="text/html; charset=utf-8"/>
+		<meta content="width=device-width, height=device-height, initial-scale=1"
+			name="viewport"/>
+		<meta content="Calin, Baenen, Katty, programmer, homepage, LGBTQIA+, contact, coding, LGBTQ+, gamer, code, home, Rust"
+			name="keywords"/>
+		<meta content="Calin Z. Baenen" name="author"/>
+		<meta content="noindex, nofollow" name="robots"/>
+		
+		
+		
+		<!-- Title, icon, and description. -->
+		<title>404 | Calin Baenen</title>
+		<link href="./assets/katty.png" type="image/png" rel="icon"/>
+		<meta content="Wrong way!" name="description"/>
+		
+		
+		
+		<!-- Stylesheets. (Loaded in the order of importance.) -->
+		<link href="./css/layout.css" type="text/css" rel="stylesheet"/>
+		<link href="./css/visuals.css" type="text/css" rel="stylesheet"/>
+		<link href="./css/misc.css" type="text/css" rel="stylesheet"/>
+		
+		
+		
+		<!-- Scripts. -->
+		<script language="javascript" defer="true" type="application/javascript"
+			src="./scripts/disable_dragging.js"></script>
+	</head>
+	
+	
+	
+	<body>
+		<!-- Display the document heading. -->
+		<header class="no-select no-drag" id="site-header">
+			<div id="belt">
+				<h1>404 : Resource Not Found</h1>
+			</div>
+		</header>
+		
+		
+		
+		<!-- Simple message saying the error. -->
+		<main id="site-body">
+			<div>
+				<p>
+					The URL you entered
+					(<span class="code-text italic" id="url-placeholder">[...]</span>)
+					can not be found here.<br/>
+					<a tabindex="1" href="./index.html">Home</a>
+				</p>
+			</div>
+		</main>
+		
+		
+		
+		<!-- Fill in the URL placeholder with the location the user tried to go. -->
+		<script language="javascript" type="application/javascript">
+			try {
+				document.getElementById("url-placeholder").innerText =
+					document.location.href;
+			} catch(e) {
+				console.log(`${e.name}: ${e.message}`);
+			}
+		</script>
+	</body>
+</html>

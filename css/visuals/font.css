@@ -1,0 +1,61 @@
+/*
+* Import the OpenDyslexic fontfile.
+* “Open Dyslexic” courtesy of Abelardo González.
+*/
+@font-face {
+	font-family:OpenDyslexic;
+	src:url(./OpenDyslexic.otf);
+}
+
+
+
+
+
+/* Set the default font and fontsize for the document. */
+body, html {
+	font-family:Arial, sans-serif;
+	font-size:large;
+}
+
+
+
+/* Makes codeblocks bold. */
+code { font-weight:bold; }
+
+
+
+
+
+/* Make spans, list items, anchors, and paragraphs wrap early. */
+.limited-space :is(span, li, a, p) {
+	max-width:calc(100% - 5px);
+}
+
+
+
+/* Give code a class for simplet integration into pages. */
+.code-text, code { font-family:Roboto Mono, monospace !important; }
+
+
+
+/* Makes codeblocks bolder for dyslexic people. */
+.dyslexic code { font-weight:bolder; }
+
+/*
+* Excludes codeblocks, mathematical equations, and other specified
+* from having the Open Dyslexic font applied to it.
+*/
+.dyslexic:not(.disable-dyslexic, .code-text, code, math) {
+	font-family:OpenDyslexic;
+	font-weight:bold !important;
+}
+
+
+
+/* Give italics a class for simpler integration into pages. */
+.italic, i { font-style:italic; }
+
+
+
+/* Give bolds a class for simplet integration into pages. */
+.bold, b { font-weight:bold; }

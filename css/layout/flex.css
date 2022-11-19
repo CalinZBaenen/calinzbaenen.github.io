@@ -1,0 +1,71 @@
+/* Make the document (body) flex. */
+body, html {
+	display:flex;
+	padding:0;
+	margin:0;
+	
+	height:100%;
+	width:100%;
+}
+
+body {
+	flex-direction:column;
+	overflow-x:hidden;
+}
+
+
+
+/* Make headings, lists, achors (hyerplinks*), and paragraphs more compact. */
+section, footer, header, output, main, div, h1, h2, h3, h4, h5, h6, ol, ul, a, p {
+	padding:0;
+	margin:0;
+	
+	height:fit-content;
+	width:fit-content;
+}
+
+
+
+
+
+/* Let items be centered on the same axis the container moves. */
+.centered-content { justify-content:center; }
+
+
+
+/* Any element that wants to be a flex-row. */
+.flex-row {flex-direction:row; display:flex;}
+
+
+
+/* Any element that wants to be a flex-column. */
+.flex {flex-direction:column; display:flex;}
+
+
+
+
+
+/* Make the first element, which should be the Katty image, stick to the left. */
+header#site-header > *:first-child { margin-left:0 !important; }
+
+/* Make items put in the header's "belt" centered. */
+header#site-header > div#belt {
+	justify-content:center;
+	margin-left:0 !important;
+	display:flex;
+	width:100%;
+}
+
+/* Make content in the header spaced out. */
+header#site-header > * { margin-left:calc(0.5vw + 10px); }
+
+/* Make the header display in flex. */
+header#site-header {
+	align-items:center;
+	padding-bottom:2px;
+	padding-top:2px;
+	max-height:max-content;
+	display:flex;
+	height:fit-content;
+	width:100% !important;
+}

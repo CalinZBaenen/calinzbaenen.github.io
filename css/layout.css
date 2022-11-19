@@ -1,0 +1,38 @@
+/*
+*
+* This file, `layout.css`, is meant to act as a "package" of CSS styles.  
+* The subsequent files imported are located in `./layout/`.
+*
+*/
+
+@import url(./layout/flex.css);  /* Loads flexible-object related layout. */
+@import url(./layout/grid.css);  /*   Loads grid-object related layout.   */
+
+
+
+/* Define global variables. */
+:root {
+	--vindent:5.25vh;  /* Vertical indentation. */
+	--indent:5vw;      /* Horizontal indentation. */
+}
+
+
+
+
+
+/* Makes individual sections vertically spaced out. */
+section + section { margin-top:var(--vindent); }
+
+
+
+
+
+/* Vertical indentation. */
+.vindent { margin-top:var(--vindent); }
+
+
+
+
+
+/* Shift things in the body and specified elements by the given `indent` variable. */
+main#site-body > *, .indent { margin-left:var(--indent); }

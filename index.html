@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en-US" dir="ltr">
+	<head>
+		<!-- Document metadata. -->
+		<base href="./index.html"/>
+		
+		<meta http-equiv="content-type" charset="utf-8"
+			content="text/html; charset=utf-8"/>
+		<meta content="width=device-width, height=device-height, initial-scale=1"
+			name="viewport"/>
+		<meta content="Calin, Baenen, Katty, programmer, homepage, LGBTQIA+, contact, coding, LGBTQ+, gamer, code, home, Rust"
+			name="keywords"/>
+		<meta content="Calin Z. Baenen" name="author"/>
+		<meta content="index, follow" name="robots"/>
+		
+		
+		
+		<!-- Title, favicon (website badge*), and description. -->
+		<title>Home | Calin Baenen</title>
+		<link href="./assets/katty.png" type="image/png" rel="icon"/>
+		<meta content="Calin Z. Baenen's official homepage!" name="description"/>
+		
+		
+		
+		<!-- Stylesheets. (Loaded in the order of importance.) -->
+		<link href="./css/layout.css" type="text/css" rel="stylesheet"/>
+		<link href="./css/visuals.css" type="text/css" rel="stylesheet"/>
+		<link href="./css/misc.css" type="text/css" rel="stylesheet"/>
+		
+		
+		
+		<!-- Scripts. -->
+		<script language="javascript" defer="true" type="application/javascript"
+			src="./scripts/disable_dragging.js"></script>
+	</head>
+	
+	
+	
+	<body>
+		<!-- Display the document heading with the navigation URLs. -->
+		<header class="no-select no-drag" id="site-header">
+			<img type="image/png" src="./assets/katty.png"/>
+			<a href="./projects/index.html">My projects.</a>
+			<a href="./legacy/index.html">Legacy content.</a>
+			<a href="./resources/index.html">Learning resources.</a>
+		</header>
+		
+		
+		
+		<main class="limited-space" style="grid-template-columns:repeat(2, 1fr);" id="site-body">
+			<!-- Main content. -->
+			<div>
+				
+				<!-- “Who am I?” explains who I am. (I want to leave a good impression!) -->
+				<section>
+					<h2>Who am I?</h2>
+					<p>
+						Hello! I'm Calin Baenen, a pansexual, enby,
+						<span id="my-age">
+							programmer that was born on October 30th, 2006.
+						</span><br/>
+						
+						I enjoy playing games, helping people, and programming as my hobby and
+						hope to make it my career.<br/>
+						<br/>
+						I work in programming languages such as
+						<a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>,
+						<a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>,
+						<a href="https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language">C++</a>,
+						<a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">Rust</a>,
+						and others!<br/>
+						<span style="margin-left:1.23vw;">(My favorite is Rust.)</span>
+					</p>
+				</section>
+				
+				<!-- The social media platforms I have. -->
+				<section>
+					<h2>Contact / Social Media</h2>
+					<ul class="no-markers">
+						<li><a titile="CalinZBaenen" href="https://github.com/CalinZBaenen">GitHub</a></li>
+						<li><a title="MrKatty" href="https://www.reddit.com/user/MrKatty">Reddit</a></li>
+						<li><a title="calinbaenen@gmail.com" href="mailto:calinbaenen@gmail.com">Email</a></li>
+					</ul>
+				</section>
+				
+			</div>
+			
+			
+			
+			
+			<!-- Side panel. -->
+			<div>
+				
+				<!-- Featured content. -->
+				<section>
+					<h2>Featured Stuff</h2>
+					<ul><a title="ParseJS" href="">ParseJS</a></ul>
+				</section>
+				
+			</div>
+		</main>
+		
+		
+		
+		<!-- Makes my age info change from year format to current-age format. -->
+		<script language="javascript" type="application/javascript">
+			try {
+				let now  = new Date();
+				let y = now.getUTCFullYear();
+				let m = now.getUTCMonth();
+				let d = now.getUTCDay();
+				let h = now.getUTCHours()-6; // GMT-6 (the timezone of MN).
+				// Correct the time to fit my locate.
+				if(h < 0) {d=d-1; h=24+h;}
+				if(d < 1) {m=m-1; d=(m % 2 ? 30 : 31)+d;}
+				if(m < 0) {y=y-1; m=12+m;}
+				
+				// Calculate if my birthday has passed and what my age should be.
+				let bday_past = (m > 8 || (m == 8 && d >= 30));
+				let age  = (y-2006)-( Number(!bday_past) );
+				
+				document.getElementById("my-age").innerText =
+					`${age} year old programmer.`;
+			} catch(e) {
+				console.log(`${e.name}: ${e.message}.`);
+			}
+		</script>
+	</body>
+</html>

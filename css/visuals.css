@@ -1,0 +1,10 @@
+/*
+*
+* This file, `visuals.css`, is meant to act as a "package" of CSS styles.  
+* The subsequent files imported are located in `./visuals/`.
+*
+*/
+
+@import url(./visuals/font.css);
+@import url(./visuals/colors.css);
+@import url(./visuals/visual_polish);

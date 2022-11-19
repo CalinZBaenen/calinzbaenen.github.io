@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en-US" dir="ltr">
+	<head>
+		<!-- Document metadata. -->
+		<base href="../../index.html"/>
+		
+		<meta http-equiv="content-type" charset="utf-8"
+			content="text/html; charset=utf-8"/>
+		<meta content="width=device-width, height=device-height, initial-scale=1"
+			name="viewport"/>
+		<meta content="Calin, Baenen, Katty, programmer, GameBoy, color, colorpicker, 15-bit, bit, bits, RGB"
+			name="keywords"/>
+		<meta content="Calin Z. Baenen" name="author"/>
+		<meta content="index, follow" name="robots"/>
+		
+		
+		
+		<!-- Title, icon, and description. -->
+		<title>15-bit Colorpicker</title>
+		<link href="./assets/katty.png" type="image/png" rel="icon"/>
+		<meta content="Wanna remake the good ol' days of the GameBoy Color? This program is for you!" name="description"/>
+		
+		
+		<!-- Stylesheets. (Loaded in the order of importance.) -->
+		<link href="./css/layout.css" type="text/css" rel="stylesheet"/>
+		<link href="./css/visuals.css" type="text/css" rel="stylesheet"/>
+		<link href="./css/misc.css" type="text/css" rel="stylesheet"/>
+		
+		<link href="./projects/15bitcolorpicker/index.css" type="text/css" rel="stylesheet"/>
+		
+		
+		
+		<!-- Scripts. -->
+		<script language="javascript" defer="true" type="application/javascript"
+			src="./scripts/disable_dragging.js"></script>
+		
+		<script language="javascript" async="true" defer="true"
+			type="application/javascript" src="./projects/15bitcolorpicker/main.js"></script>
+	</head>
+	
+	
+	
+	<body>
+		<!-- Display the document heading. -->
+		<header class="no-select no-drag" id="site-header">
+			<img type="image/png" src="./assets/katty.png"/>
+			<div id="belt">
+				<h1>15-bit Colorpicker</h1>
+			</div>
+		</header>
+		
+		
+		
+		<main class="limited-space" id="site-body">
+			
+			<!-- Talks about what this application is. -->
+			<section>
+				<h2>What is this?</h2>
+				<p>
+					This small program was designed to let me
+					easily pick out colors from the from the
+					<a hreflang="en" href="https://en.wikipedia.org/wiki/List_of_monochrome_and_RGB_color_formats#15-bit_RGB">
+						15-bit color
+					</a> spectrum.<br/>
+					You can enter a 15-bit colorcode or input a color.<br/>
+					&nbsp;&nbsp;(If the given color is out of the 15BCS
+						it will automatically convert it to the nearest color.)
+				</p>
+			</section>
+			
+			
+			
+			<!-- Explains what 15-bit color is. -->
+			<section>
+				<h2>What is 15-bit color?</h2>
+				<p>
+					15-bit color is a colorsystem where
+					red, green, and blue use five <a hreflang="en" href="https://en.wikipedia.org/wiki/Bit">
+						bits
+					</a> each.<br/>
+					For comparison, most, if not all, modern computers use 32-bit color,
+					usually RGB (<b>Red</b> <b>Green</b> <b>Blue</b><sup>*</sup>),
+					where red, green, and blue use eight bits each with an
+					additional alpha channel.
+				</p>
+			</section>
+			
+			
+			
+			<!-- The UI for the program. -->
+			<section>
+				<h2>The Program</h2>
+				<div class="no-select">
+					<div style="background-color:#008b8b;" class="indent card">
+						
+						<!-- Red input. -->
+						<div class="card">
+							<label for="in-red">Red</label>
+							<input placeholder="0"
+								onchange="ColorpickerProgram.setRed(this.value/31 * 255);"
+								value="0" type="number" max="31" min="0" id="in-red"/>
+						</div>
+						
+						<!-- Green input. -->
+						<div class="card">
+							<label for="in-grn">Green</label>
+							<input placeholder="0"
+								onchange="ColorpickerProgram.setGreen(this.value/31 * 255);"
+								value="0" type="number" max="31" min="0" id="in-grn"/>
+						</div>
+						
+						<!-- Blue input. -->
+						<div class="card">
+							<label for="in-blu">Blue</label>
+							<input placeholder="0"
+								onchange="ColorpickerProgram.setBlue(this.value/31 * 255);"
+								value="0" type="number" max="31" min="0" id="in-blu"/>
+						</div>
+						
+					</div>
+					
+					
+					
+					<!-- Swatch and colorpicker. -->
+					<div class="vindent indent card flex">
+						<div class="indent">
+							<output title="#000000" class="indent"
+								for="in-red in-grn in-blu in-clr" id="swatch"></output>
+						</div>
+						<div class="card">
+							<label for="in-clr">Color</label>
+							<input onchange="ColorpickerProgram.hex = this.value;"
+								depth="15" value="#000000" type="color" id="in-clr"/>
+						</div>
+					</div>
+					
+					<!-- Copy color button. -->
+					<button onclick="navigator.clipboard.writeText( document.getElementById(`swatch`)?.title ?? `#000000` );"
+						class="indent">Copy color!</button>
+				</div>
+			</section>
+			
+		</main>
+	</body>
+</html>
