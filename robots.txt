@@ -1,0 +1,14 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /assets/images/Katty/
+Disallow: /assets/images/misc/
+Disallow: /legacy/
+
+Disallow: /resources/furries/my_fursona.html
+Disallow: /resources/furries/fursuits.html
+Disallow: /README.md
+Disallow: /404.html
+
+Sitemap: https://calinzbaenen.github.io/sitemap.xml

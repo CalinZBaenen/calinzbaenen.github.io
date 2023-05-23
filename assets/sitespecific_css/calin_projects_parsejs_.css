@@ -1,0 +1,16 @@
+#keyword-list {
+	flex-direction:row;
+	flex-wrap:wrap-reverse;
+	display:flex;
+	
+	background-color:#ffffff;
+	
+	height:10vh;
+	width:100%;
+}
+
+#keyword-list > #LIST_CONTENT {
+	flex-direction:row;
+	flex-wrap:wrap;
+	display:flex;
+}
