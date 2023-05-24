@@ -10,23 +10,37 @@
 		<priority>1.0</priority>
 	</url>
 	
+	
+	
+	<!-- Learning resources. -->
 	<url>
 		<loc>https://calinzbaenen.github.io/resources/</loc>
 	</url>
+	
 	
 	<url>
 		<loc>https://calinzbaenen.github.io/resources/furries/</loc>
 	</url>
 	
-	<url>
-		<loc>https://calinzbaenen.github.io/resources/language/</loc>
-	</url>
+	 <!-- Misconceptions about furries. -->
+	 <url>
+		 <loc>https://calinzbaenen.github.io/resources/furries/misconceptions</loc>
+	 </url>
+	
 	
 	<url>
 		<loc>https://calinzbaenen.github.io/resources/lgbtqia/</loc>
 	</url>
 	
+	
+	
+	<!-- My projects. -->
 	<url>
-		<loc>https://calinzbaenen.github.io/resources/HTML/</loc>
+		<loc>https://calinzbaenen.github.io/projects/</loc>
+	</url>
+	
+	
+	<url>
+		<loc>https://calinzbaenen.github.io/projects/parsejs</loc>
 	</url>
 </urlset>
