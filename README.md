@@ -8,7 +8,7 @@ fun to show off my work and creativity.
 I started work on the website since I was eleven or twelve, and, throughout the course of its history,
 it has seen a lot of revisions since its initial launch.
 
-(Website version: `1.0.1`)
+(Website version: `1.1.1`)
 
 
 ## Who am I?
