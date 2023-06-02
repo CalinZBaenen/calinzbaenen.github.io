@@ -1,0 +1,70 @@
+/* Make paragraphs and alike only take up so much of their parent container. */
+table, dd, li, p {
+	overflow-wrap:break-word;
+	text-overflow:"-";
+	max-width:min(calc(90% + 7.5em), 100%);
+	overflow:visible;
+}
+
+
+
+/* Anchor-text decoration. */
+a                { text-decoration:dashed underline; }
+
+a:target {
+	background-color:#000000;
+	text-decoration:wavy underline;
+	font-weight:bold;
+	color:var(--color-hot_pink);
+}
+
+a:target:hover   { text-decoration:none; }
+
+a:focus, a:hover { text-decoration:solid underline; }
+
+
+
+
+
+.superscript, .txt-sup, sup {
+	vertical-align:super;
+	font-size:0.75em;
+}
+
+.superscript a, .txt-sup a, sup a, a.txt-sup                         { text-decoration:none; }
+
+.superscript a:hover, .txt-sup a:hover, sup a:hover, a.txt-sup:hover { text-decoration:solid underline; }
+
+
+
+.underlined, .txt-u, u { text-decoration:solid underline; }
+
+
+
+.subscript, .txt-sub, sub {
+	vertical-align:sub;
+	font-size:0.75em;
+}
+
+.subscript a, .txt-sub a, sub a, a.txt-sub                         { text-decoration:none; }
+
+.subscript a:hover, .txt-sub a:hover, sub a:hover, a.txt-sub:hover { text-decoration:solid underline; }
+
+
+
+.bolder, .txt-xb         { font-weight:bolder; }
+
+
+
+.italic, .txt-i, i       { font-style:italic; }
+
+
+
+.bold, .txt-b, strong, b { font-weight:bold; }
+
+
+
+
+
+/* Dictionary-entry formatting. */
+dt.dict-entry, dt.dict-entry+span { display:inline-block; }

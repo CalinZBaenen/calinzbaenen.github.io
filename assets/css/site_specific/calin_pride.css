@@ -1,0 +1,19 @@
+.nonbinary { font-weight:bolder; }
+
+.nonbinary > span:nth-child(1) { color:#fcf434; }
+
+.nonbinary > span:nth-child(2) { color:#ffffff; }
+
+.nonbinary > span:nth-child(3) { color:#9c59d1; }
+
+.nonbinary > span:nth-child(4) { color:#2c2c2c; }
+
+
+
+.pansexual { font-weight:bolder; }
+
+.pansexual > span:nth-child(1) { color:#ff218c; }
+
+.pansexual > span:nth-child(2) { color:#ffd800; }
+
+.pansexual > span:nth-child(3) { color:#21b1ff; }

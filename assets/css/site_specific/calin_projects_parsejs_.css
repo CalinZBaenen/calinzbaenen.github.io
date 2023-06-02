@@ -1,0 +1,48 @@
+.preview-field {
+	border-radius:1px;
+	border:1px solid #000000;
+}
+
+
+
+
+
+#live-demonstration {
+	background-color:#ffffff;
+	padding:calc(1vh + 5px) calc(1vw + 5px);
+}
+
+
+
+#keywords, #text { width:100%; }
+
+#keywords > #__list_content {
+	background-color:#9f9f9f;
+	
+	/* Display. */
+	flex-direction:row;
+	flex-wrap:wrap-reverse;
+	display:flex;
+	
+	/* Sizing. */
+	min-height:20vh;
+	max-width:90%;
+	min-width:15vw;
+	width:50%;
+}
+
+#keywords > #__list_content > * {
+	background-color:#ef980c9f;
+	border-radius:10px;
+	margin-right:calc(5em + 0.5vw);
+	padding:3px;
+	border:1px solid #000000;
+}
+
+
+
+#write-txt {
+	max-width:50%;
+	display:block;
+	width:50%;
+}
