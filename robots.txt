@@ -1,5 +1,12 @@
 User-agent: *
 
+Allow: /resources/furries/misconceptions.html
+Allow: /resources/furries/index.html
+Allow: /resources/lgbtqia/index.html
+Allow: /resources/furries/faq.html
+Allow: /projects/parsejs.html
+Allow: /projects/index.html
+
 Disallow: /resources/language/
 Disallow: /resources/furries/
 Disallow: /resources/lgbtqia/
@@ -9,12 +16,5 @@ Disallow: /legacy/
 
 Disallow: /README.md
 Disallow: /404.html
-
-Allow: /resources/furries/misconceptions.html
-Allow: /resources/furries/index.html
-Allow: /resources/lgbtqia/index.html
-Allow: /resources/furries/faq.html
-Allow: /projects/parsejs.html
-Allow: /projects/index.html
 
 Sitemap: https://calinzbaenen.github.io/sitemap.xml

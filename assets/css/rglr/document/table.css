@@ -1,0 +1,29 @@
+/* Table styling. */
+table {
+	background-color:var(--color-cream_white);
+	border-collapse:collapse;
+	box-sizing:border-box;
+}
+
+table, table tr, table td, table th { border:1px solid #000000; }
+
+table tr:nth-child(even) { background-color:var(--color-dark_paper); }
+
+
+
+/* Table-data padding. */
+td, th { padding:1em; }
+
+
+
+
+
+@media only screen and (prefers-color-scheme:dark) {
+	table { background-color:var(--color-charcoal_gray); }
+	
+	table tr:nth-child(even) { background-color:var(--color-asphalt); }
+	
+	
+	
+	td, th { padding:1em; }
+}

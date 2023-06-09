@@ -1,0 +1,12 @@
+/* The main content on the page. */
+main {
+	flex-grow:1;
+	padding:2vh 1vw clamp(5vh, 15%, 200px) 1vw;
+	width:100%;
+}
+
+main > section {
+	max-width:100%;
+	margin:0px auto;
+	width:50%;
+}

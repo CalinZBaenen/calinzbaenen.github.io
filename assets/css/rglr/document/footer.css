@@ -1,0 +1,22 @@
+footer {
+	/* Visuals. */
+	background-color:#000000;
+	font-weight:bold;
+	color:#ffffff;
+	
+	/* Positioning. */
+	position:sticky;
+	top:100%;
+	
+	/* Sizing. */
+	font-size:var(--fontsize-small);
+	padding:2px;
+	width:100%;
+}
+
+footer section {
+	display:inline-block;
+	margin:0.5em 4em;
+}
+
+footer a { color:var(--color-hot_pink); }

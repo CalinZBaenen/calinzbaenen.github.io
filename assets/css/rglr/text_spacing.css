@@ -1,5 +1,0 @@
-main :is(dl, ol, ul, a, p) + :is(section, a, p) { margin-top:calc(1em + 1px); }
-
-main :is(section, dl, ol, ul, a, p) + section   { margin-top:calc(2em + calc(1em / 3)); }
-
-main > dt + dd                                  { margin-top:2px; }

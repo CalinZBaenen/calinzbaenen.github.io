@@ -1,0 +1,15 @@
+:root {
+	/* Large font sizes. */
+	--fontsize-intermediate:1.25em;
+	--fontsize-moderate:1.8em;
+	--fontsize-medium:1.5em;
+	--fontsize-large:2.125em;
+	--fontsize-xxl:3em;
+	--fontsize-xl:2.5em;
+	
+	/* Small font sizes. */
+	--fontsize-small:0.75em;
+	
+	/* Fontsize boundaries. */
+	--fontsize-min:12pt;
+}

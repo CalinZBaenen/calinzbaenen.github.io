@@ -1,0 +1,22 @@
+/* Make paragraphs and alike only take up so much of their parent container. */
+table, dd, li, p {
+	overflow-wrap:break-word;
+	text-overflow:"-";
+	overflow:visible;
+}
+
+
+
+/* Set the default line height. */
+html { line-height:1.2; }
+
+
+
+/* Spaces certain textual elements. */
+main :is(h1, h2, h3, h4, h5, h6) + :is(section, table, div, dl, h1, h2, h3, h4, h5, h6, ol, ul a, p) { margin-top:1.2rem; }
+
+main :is(dl, ol, ul, a, p) + :is(section, a, p) { margin-top:calc(1em + 1px); }
+
+main :is(section, dl, ol, ul, a, p) + section { margin-top:calc(2em + calc(1em / 3)); }
+
+main > dt + dd { margin-top:2px; }

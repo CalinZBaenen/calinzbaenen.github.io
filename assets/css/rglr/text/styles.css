@@ -1,0 +1,48 @@
+/* Make `strong` elements only have text-decoration if their parent has it set. */
+strong { text-decoration:inherit; }
+
+
+
+
+
+/* Superscript text. */
+.superscript, .txt-sup, sup {
+	vertical-align:super;
+	font-size:var(--fontsize-small);
+}
+
+.superscript a, .txt-sup a, sup a, a.txt-sup                         { text-decoration:none; }
+
+.superscript a:hover, .txt-sup a:hover, sup a:hover, a.txt-sup:hover { text-decoration:solid underline; }
+
+
+
+/* Underlined text. */
+.underlined, .txt-u, u { text-decoration:solid underline; }
+
+
+
+/* Superscript text. */
+.subscript, .txt-sub, sub {
+	vertical-align:sub;
+	font-size:var(--fontsize-small);
+}
+
+.subscript a, .txt-sub a, sub a, a.txt-sub                         { text-decoration:none; }
+
+.subscript a:hover, .txt-sub a:hover, sub a:hover, a.txt-sub:hover { text-decoration:solid underline; }
+
+
+
+/* Extra-bold text. */
+.bolder, .txt-xb   { font-weight:bolder; }
+
+
+
+/* Italic text. */
+.italic, .txt-i, i { font-style:italic; }
+
+
+
+/* Bold text. */
+.bold, .txt-b, strong, b { font-weight:bold; }
