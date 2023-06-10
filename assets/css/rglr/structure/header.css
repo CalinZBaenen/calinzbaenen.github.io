@@ -37,7 +37,7 @@ header a, header a:visited {
 
 header a:focus, header a:hover { text-decoration:underline; }
 
-header img { height:clamp(16px, 5vh, 75px); }
+header img { height:clamp(1.5em, 5vh, 75px); }
 
 header > nav > * { margin-right:2em; }
 

@@ -1,6 +1,28 @@
+* {
+	/* Sizing. */
+	box-sizing:border-box;
+	max-height:100%;
+	max-width:100%;
+	height:fit-content;
+	width:fit-content;
+	
+	/* Whitespace. */
+	padding:0;
+	margin:0;
+}
+
+
+
+
+
 body, html {
+	/* Overflow. */
 	overflow-x:hidden;
 	overflow-x:clip;
+	
+	/* Sizing. */
+	max-height:none;
+	width:100%;
 }
 
 
@@ -13,6 +35,7 @@ body {
 	
 	/* Display. */
 	flex-direction:column;
+	text-overflow:"";
 	min-height:100%;
 	display:flex;
 	

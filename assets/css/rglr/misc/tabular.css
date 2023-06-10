@@ -1,8 +1,13 @@
-/* Table styling. */
+table, dd, li, p {
+	overflow-wrap:break-word;
+	overflow:visible;
+}
+
+
+
 table {
 	background-color:var(--color-cream_white);
 	border-collapse:collapse;
-	box-sizing:border-box;
 }
 
 table, table tr, table td, table th { border:1px solid #000000; }
@@ -11,7 +16,10 @@ table tr:nth-child(even) { background-color:var(--color-dark_paper); }
 
 
 
-/* Table-data padding. */
+dd, ol, ul { padding-left:calc(3em + calc(1em / 3)); }
+
+
+
 td, th { padding:1em; }
 
 

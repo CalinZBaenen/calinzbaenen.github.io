@@ -19,4 +19,4 @@ footer section {
 	margin:0.5em 4em;
 }
 
-footer a { color:var(--color-hot_pink); }
+footer a, footer a:visited { color:var(--color-hot_pink); }

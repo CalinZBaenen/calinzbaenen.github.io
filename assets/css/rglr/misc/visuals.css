@@ -45,10 +45,11 @@ div.image-raster {
 	
 	/* Size. */
 	height:fit-content;
-	width:fit-content;
+	width:max-content;
 }
 
 div.image-raster img {
 	margin-right:calc(1% + 1rem);
+	max-width:33.3%;
 	max-width:calc(100% / 3);
 }
