@@ -17,3 +17,10 @@ main :is(section, dl, ol, ul, a, p) + section { margin-top:calc(2em + calc(1em /
 dl dt, dl dt + a { display:inline; }
 
 dl dt ~ dd { margin-top:2px; }
+
+
+
+ol, ul {
+	padding-bottom:1px;
+	padding-top:1px;
+}
