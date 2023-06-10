@@ -7,7 +7,7 @@
 These HTML pages, images, CSS, etc..., are, collectively, my website; I made this webpage to show off my work and creativity.  
 I started work on the website since I was eleven or twelve, and, throughout the course of its history, it has seen a lot of revisions since its initial launch on Google Firebase.
 
-(Website version: `1.2.0`)
+(Website version: `1.2.1`)
 
 
 ## Who am I?
@@ -26,7 +26,7 @@ I rarely play games nowadays; however, when I find a good game I can get really 
 ## Social Media and Contact
 
 [calinbaenen@gmail.com, email](mailto:calinbaenen@gmail.com)  
-[Katty T. Enby Cat, *StackOverflow*](https://stackoverflow.com/users/10963964/katty-t-enby-cat)
+[Katty T. Enby Cat, *StackOverflow*](https://stackoverflow.com/users/10963964/katty-t-enby-cat)  
 [Calin Baenen, *Sololearn*](https://www.sololearn.com/profile/10522950)  
 [Katty The Cat, *Duolingo*](https://www.duolingo.com/profile/CalinTheCatboy)  
 [CalinZBaenen, *GitHub*](https://github.com/CalinZBaenen)  
