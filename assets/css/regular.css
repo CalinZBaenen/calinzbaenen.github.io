@@ -1,19 +1,19 @@
-/* Import styles pertaining to the document's structure. */
-@import url(/assets/css/rglr/structure/footer.css);
-@import url(/assets/css/rglr/structure/header.css);
-@import url(/assets/css/rglr/structure/main.css);
-
-/* Import the various colors my website uses. */
-@import url(/assets/css/rglr/color_vars/light.css);
-@import url(/assets/css/rglr/color_vars/dark.css);
-
-/* Import miscellaneous styles. */
-@import url(/assets/css/rglr/misc/tabular.css);
-@import url(/assets/css/rglr/misc/visuals.css);
-
 /* Import textual styles. */
 @import url(/assets/css/rglr/text/fontsize_vars.css);
 @import url(/assets/css/rglr/text/text_spacing.css);
 @import url(/assets/css/rglr/text/anchors.css);
 @import url(/assets/css/rglr/text/headers.css);
 @import url(/assets/css/rglr/text/styles.css);
+
+/* Import the various colors my website uses. */
+@import url(/assets/css/rglr/color_vars/light.css);
+@import url(/assets/css/rglr/color_vars/dark.css);
+
+/* Import styles for the document's structure. */
+@import url(/assets/css/rglr/structure/footer.css);
+@import url(/assets/css/rglr/structure/header.css);
+@import url(/assets/css/rglr/structure/main.css);
+
+/* Import miscellaneous styles. */
+@import url(/assets/css/rglr/misc/tabular.css);
+@import url(/assets/css/rglr/misc/visuals.css);

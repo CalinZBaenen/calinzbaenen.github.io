@@ -50,3 +50,9 @@ header > nav.__override_margins > * { margin-right:auto; }
 @media only screen and (prefers-color-scheme:dark) {
 	header { background-color:var(--color-mustard_yellow); }
 }
+
+
+
+@media (width < 52em) {
+	header { font-size:var(--fontsize-lim); }
+}

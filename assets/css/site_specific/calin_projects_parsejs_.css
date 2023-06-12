@@ -1,3 +1,9 @@
+form, form > section, #live-demonstration { width:100%; }
+
+
+
+
+
 .preview-field {
 	border-radius:1px;
 	border:1px solid #000000;
@@ -10,11 +16,10 @@
 #live-demonstration {
 	background-color:#ffffff;
 	padding:calc(1vh + 5px) calc(1vw + 5px);
+	color:#000000;
 }
 
 
-
-#keywords, #text { width:100%; }
 
 #keywords > #__list_content {
 	background-color:#9f9f9f;

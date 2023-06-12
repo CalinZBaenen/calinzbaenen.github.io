@@ -1,4 +1,3 @@
-/* The main content on the page. */
 main {
 	flex-grow:1;
 	padding:2vh 1vw clamp(5vh, 15%, 200px) 1vw;
@@ -8,4 +7,20 @@ main {
 main > section {
 	margin:0px auto;
 	width:50%;
+}
+
+
+
+
+
+@media (width < 40em) {
+	main { font-size:var(--fontsize-lim); }
+	
+	main > section { width:75%; }
+}
+
+@media (width < 25em) {
+	main { font-size:var(--fontsize-small); }
+	
+	main > section { width:90%; }
 }

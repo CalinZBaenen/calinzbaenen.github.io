@@ -9,6 +9,7 @@
 	
 	/* Small font sizes. */
 	--fontsize-small:0.75em;
+	--fontsize-lim:0.8em;
 	
 	/* Fontsize boundaries. */
 	--fontsize-min:12pt;
