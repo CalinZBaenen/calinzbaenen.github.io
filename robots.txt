@@ -1,17 +1,17 @@
 User-agent: *
 
 Allow: /resources/furries/misconceptions.html
+Allow: /resources/projects/parsejs.html
+Allow: /resources/projects/index.html
 Allow: /resources/furries/index.html
 Allow: /resources/lgbtqia/index.html
 Allow: /resources/furries/faq.html
-Allow: /projects/parsejs.html
-Allow: /projects/index.html
 
 Disallow: /resources/language/
+Disallow: /resources/projects/
 Disallow: /resources/furries/
 Disallow: /resources/lgbtqia/
 Disallow: /assets/images/
-Disallow: /projects/
 Disallow: /legacy/
 
 Disallow: /README.md

@@ -7,7 +7,7 @@
 These HTML pages, images, CSS, etc..., are, collectively, my website; I made this webpage to show off my work and creativity.  
 I started work on the website since I was eleven or twelve, and, throughout the course of its history, it has seen a lot of revisions since its initial launch on Google Firebase.
 
-(Website version: `1.2.4`)
+(Website version: `1.2.5`)
 
 
 ## Who am I?
