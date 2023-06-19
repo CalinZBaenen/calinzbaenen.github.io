@@ -15,5 +15,7 @@
 @import url(/assets/css/rglr/structure/main.css);
 
 /* Import miscellaneous styles. */
+@import url(/assets/css/rglr/misc/button.css);
+@import url(/assets/css/rglr/misc/button_anchortext.css);
 @import url(/assets/css/rglr/misc/tabular.css);
 @import url(/assets/css/rglr/misc/visuals.css);

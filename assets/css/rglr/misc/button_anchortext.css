@@ -1,0 +1,15 @@
+a.buttonlike {
+	--button-color:#00000000;
+	
+	-webkit-tap-highlight-color:var(--hover-color);
+	border-color:#00000000;
+	text-align:center;
+}
+
+
+
+
+
+@media (hover:none) {
+	a.buttonlike:active { background-color:var(--hover-color); }
+}

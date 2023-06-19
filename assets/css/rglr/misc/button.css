@@ -1,0 +1,24 @@
+button, a.buttonlike, input[type="submit"] {
+	--button-color:#a0a0a0;
+	--hover-color:#11111132;
+	
+	background-color:var(--button-color);
+	border-radius:20px;
+	transition:background-color 0.125s ease;
+	padding:3px;
+	border:2px groove #000000;
+	cursor:pointer;
+}
+
+button:disabled, input[type="submit"]:disabled { cursor:default; }
+
+button:enabled:hover, a.buttonlike:hover, input[type="submit"]:enabled:hover { background:var(--button-color) linear-gradient(var(--hover-color), var(--hover-color)); }
+
+
+
+
+
+@media (hover:none) {
+	/* This exists incase a mobile browser emulates hover-events. */
+	button:enabled:hover, a.buttonlike:hover, input[type="submit"]:enabled:hover { background-color:#00000000; }
+}
