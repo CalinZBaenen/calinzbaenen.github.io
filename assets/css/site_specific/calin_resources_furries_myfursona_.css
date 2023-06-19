@@ -5,4 +5,7 @@ header {
 
 
 
-body { background-color:#7f837f; }
+body {
+	background-color:#7f837f;
+	color:#000000;
+}
