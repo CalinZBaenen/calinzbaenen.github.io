@@ -1,7 +1,7 @@
 User-agent: *
 
 Disallow: /.construction/
-Disallow: /.assets/
+Disallow: /assets/
 Disallow: /legacy/
 
 Disallow: /README.md
