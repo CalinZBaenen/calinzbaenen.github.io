@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+
+
+
+:root {
+	--color-cherryblossom:#E69FB7;
+	--color-orangepeel:#FF7F0F;
+	--color-charcoal:#181818;
+	--color-asphalt:#24241C;
+	--color-hotpink:#E954C1;
+	--color-butter:#EEEE98;
+	--color-grape:#681275;
+}
+
+
+
+footer a,  nav#navpanel a {
+	color:hotpink;
+	color:var(--color-hotpink);
+}
+
+footer,  nav#navpanel {
+	background:black;
+	color:white;
+}
+
+header {
+	background:khaki;
+	background:var(--color-butter);
+}
+
+body {
+	background:pink;
+	background:var(--color-cherryblossom);
+}

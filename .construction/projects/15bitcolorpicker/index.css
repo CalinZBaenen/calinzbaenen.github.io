@@ -1,0 +1,37 @@
+/* Make cards below other cards slightly lower. */
+.card + .card { margin-top:var(--vindent); }
+
+/* Give cards a distinct look. */
+div.card {
+	background-color:#ffffff;
+	border-radius:6px;
+	font-weight:bold;
+	box-shadow:3px 3px 1px #0f0f0f75;
+	padding:5px;
+}
+
+
+
+
+
+/* Disallow the color swatch from baring any visible content. */
+output#swatch * {
+	visibility:hidden;
+	display:none;
+	content:"";
+}
+
+/* Make the swatch the default color and make it easily visible. */
+output#swatch {
+	background-color:#000000;
+	border-color:#000000;
+	
+	border-radius:10px;
+	border-style:dashed;
+	
+	display:block;
+	height:calc(4vh + 5px);
+	width:calc(4vw + 5px);
+	
+	margin:2px;
+}

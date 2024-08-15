@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /.construction/
+Disallow: /.assets/
+Disallow: /legacy/
+
+Disallow: /README.md
+Disallow: /404.html
+
+Sitemap: https://calinzbaenen.github.io/sitemap.xml
