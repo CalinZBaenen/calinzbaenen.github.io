@@ -5,6 +5,19 @@
 	display:inline;
 }
 
+.code {
+	letter-spacing:1px;
+	font-kerning:none;
+	font-family:monospace;
+}
+
+.flex {
+	display:-ms-flexbox;
+	display:flexbox;
+	display:-webkit-flex;
+	display:flex;
+}
+
 .grid {
 	display:-moz-grid;
 	display:-ms-grid;

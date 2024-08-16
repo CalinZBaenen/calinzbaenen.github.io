@@ -75,6 +75,8 @@
 				border-color:white;
 				scale:1.1;
 			}
+			
+			#social-media { margin:0 auto 4px; }
 		</style>
 	</head>
 	
@@ -82,46 +84,46 @@
 	
 	<body>
 		<header>
-			<div id="__katty-container">
-				<img aria-hidden="true" draggable="false" type="image/png" src="./assets/images/Katty/emblem.png" />
+			<div aria-hidden="true" id="__katty-container">
+				<img draggable="false" type="image/png" src="./assets/images/Katty/emblem.png" />
 			</div>
 		</header>
 		
-		<nav draggable="false" data-nosnippet id="navpanel">
-			<div class="flex col" id="hotlinks">
-				<a aria-label="Projects" href="./projects/">Projects</a>
-				<a aria-label="Resources" href="./resources/">Resources</a>
-				<a aria-label="Legacy Content" href="./legacy/">Legacy Content</a>
-				<a aria-label="Achievements" href="./achievements/">Achievements</a>
-			</div>
+		<nav data-nosnippet id="navpanel">
+			<ul id="hotlinks">
+				<li><a aria-label="Projects" href="./projects/">Projects</a></li>
+				<li><a aria-label="Resources" href="./resources/">Resources</a></li>
+				<li><a aria-label="Legacy Content" href="./legacy/">Legacy Content</a></li>
+				<li><a aria-label="Achievements" href="./achievements/">Achievements</a></li>
+			</ul>
 			
-			<div class="spacer"></div>
+			<span class="spacer"></span>
 			
 			<div class="full-width flex col">
-				<p aria-level="2" role="heading">Social Media</p>
-				<div class="grid" id="__social-media">
-					<a target="_blank" title="GitHub (@CalinZBaenen)" href="https://github.com/CalinZBaenen">
-						<img type="image/svg+xml" alt="GitHub" src="./assets/images/favicons/github.svg" />
+				<span aria-level="2" role="heading" id="social-media">Social Media</span>
+				<div aria-labelledby="social-media" class="grid" id="__social-media">
+					<a aria-label="GitHub" target="_blank" title="GitHub (@CalinZBaenen)" href="https://github.com/CalinZBaenen">
+						<img aria-hidden="true" type="image/svg+xml" alt="GitHub" src="./assets/images/favicons/github.svg" />
 					</a>
 					
-					<a target="_blank" title="DEV (@CalinZBaenen)" href="https://dev.to/CalinZBaenen">
-						<img type="image/webp" alt="DEV" src="./assets/images/favicons/dev.webp" />
+					<a aria-label="DEV" target="_blank" title="DEV (@CalinZBaenen)" href="https://dev.to/CalinZBaenen">
+						<img aria-hidden="true" type="image/webp" alt="DEV" src="./assets/images/favicons/dev.webp" />
 					</a>
 					
-					<a target="_blank" title="Stack Overflow (@KattyTheEnby)" href="https://stackoverflow.com/users/10963964/KattyTheEnby">
-						<img type="image/webp" alt="Stack Overflow" src="./assets/images/favicons/stackoverflow.webp" />
+					<a aria-label="Stack Overflow" target="_blank" title="Stack Overflow (@KattyTheEnby)" href="https://stackoverflow.com/users/10963964/KattyTheEnby">
+						<img aria-hidden="true" type="image/webp" alt="Stack Overflow" src="./assets/images/favicons/stackoverflow.webp" />
 					</a>
 					
-					<a target="_blank" title="Mastodon (@KattyTheEnby@mastodon.social)" href="https://mastodon.social/@KattyTheEnby">
-						<img type="image/png" alt="Mastodon" src="./assets/images/favicons/mastodon.png" />
+					<a aria-label="Mastodon" target="_blank" title="Mastodon (@KattyTheEnby@mastodon.social)" href="https://mastodon.social/@KattyTheEnby">
+						<img aria-hidden="true" type="image/png" alt="Mastodon" src="./assets/images/favicons/mastodon.png" />
 					</a>
 					
-					<a target="_blank" title="Bluesky (@KattyTheEnby.bsky.social)" href="https://bsky.app/profile/KattyTheEnby.bsky.social">
-						<img type="image/png" alt="Bluesky" src="./assets/images/favicons/bsky.png" />
+					<a aria-label="Bluesky" target="_blank" title="Bluesky (@KattyTheEnby.bsky.social)" href="https://bsky.app/profile/KattyTheEnby.bsky.social">
+						<img aria-hidden="true" type="image/png" alt="Bluesky" src="./assets/images/favicons/bsky.png" />
 					</a>
 					
-					<a target="_blank" title="Reddit (u/MrKatty)" href="https://www.reddit.com/user/MrKatty/">
-						<img type="image/png" alt="Reddit" src="./assets/images/favicons/reddit.png" />
+					<a aria-label="Reddit" target="_blank" title="Reddit (u/MrKatty)" href="https://www.reddit.com/user/MrKatty/">
+						<img aria-hidden="true" type="image/png" alt="Reddit" src="./assets/images/favicons/reddit.png" />
 					</a>
 				</div>
 			</div>
@@ -150,40 +152,46 @@
 		</main>
 		
 		<footer>
-			<p>Text</p>
+			<span draggable="false">v1.4.0</span>
+			<span class="spacer"></span>
+			<span draggable="false">
+				View the code from the GitHub repository,
+				<a tabindex="-1" href="https://github.com/CalinZBaenen/calinzbaenen.github.io">CalinZBaenen/calinzbaenen.github.io</a>.
+			</span>
 		</footer>
 		
 		
 		
 		<!-- Makes my age info change from year format to current-age format. -->
 		<script>
-			try {
-				let now  = new Date();
-				
-				let y = now.getUTCFullYear();
-				let m = now.getUTCMonth();
-				let d = now.getUTCDay();
-				let h = now.getUTCHours()-6;   // GMT-6 (the timezone of MN).
-				
-				if(h < 0) {
-					d = d-1;
-					h = 24+h;
-				}
-				if(d < 1) {
-					m = m-1;
-					d = (m % 2 ? 30 : 31)+d;
-				}
-				if(m < 0) {y=y-1; m=12+m;}
-				
-				// Calculate if my birthday has passed and what my age should be.
-				let bday_past = (m > 8 || (m == 8 && d >= 30));
-				let age  = (y-2006)-( Number(!bday_past) );
-				
-				document.getElementById("my-age").innerText =
-					`${age}-year-old programmer`;
-			} catch(e) {
-				console.log(`${e.name}: ${e.message}.`);
+			let now = new Date();
+			
+			const time = [now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours()-6];
+			
+			if(time[3] < 0) {
+				time[2] = time[2]-1;
+				time[3] = 24+time[3];
 			}
+			if(time[2] < 1) {
+				time[1] = time[1]-1;
+				time[2] = (time[1] % 2 ? 30 : 31)+time[2];
+			}
+			if(time[1] < 0) {
+				time[0] = time[0]-1;
+				time[1] = 12+time[1];
+			}
+			
+			const bday_past = (
+				time[1] > 9 || (
+					time[1] == 9 &&
+					(time[2] > 30 || (time[2] == 30 && time[3] >= 10))
+				)
+			);
+			
+			let age = time[0]-2006;
+			if(!bday_past) age -= 1;
+			
+			document.getElementById("my-age").innerText = `${age}-year-old programmer`;
 		</script>
 	</body>
 </html>

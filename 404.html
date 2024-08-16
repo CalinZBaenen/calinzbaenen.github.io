@@ -7,71 +7,68 @@
 <html lang="en-US" dir="ltr">
 	<head>
 		<!-- Document metadata. -->
-		<base href="./index.html"/>
+		<base href="./" />
 		
-		<meta http-equiv="content-type" charset="utf-8"
-			content="text/html; charset=utf-8"/>
-		<meta content="width=device-width, height=device-height, initial-scale=1"
-			name="viewport"/>
-		<meta content="Calin, Baenen, Katty, programmer, homepage, LGBTQIA+, contact, coding, LGBTQ+, gamer, code, home, Rust"
-			name="keywords"/>
-		<meta content="Calin Z. Baenen" name="author"/>
-		<meta content="noindex, nofollow" name="robots"/>
+		<meta content="telephone=no, address=no, date=no" name="format-detection" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=UTF-8" />
+		<meta content="width=device-width, height=device-height, initial-scale=1" name="viewport" />
+		<meta content="Calin Z. Baenen" name="author" />
 		
 		
 		
-		<!-- Title, icon, and description. -->
+		<!-- Title, favicon, and description. -->
 		<title>404 | Calin Baenen</title>
-		<link href="./assets/katty.png" type="image/png" rel="icon"/>
-		<meta content="Wrong way!" name="description"/>
+		<link href="./favicon.ico" type="image/x-icon" rel="shortcut icon" />
+		<link href="./favicon.ico" type="image/x-icon" rel="icon" />
 		
 		
 		
 		<!-- Stylesheets. (Loaded in the order of importance.) -->
-		<link href="./css/layout.css" type="text/css" rel="stylesheet"/>
-		<link href="./css/visuals.css" type="text/css" rel="stylesheet"/>
-		<link href="./css/misc.css" type="text/css" rel="stylesheet"/>
-		
-		
-		
-		<!-- Scripts. -->
-		<script language="javascript" defer="true" type="application/javascript"
-			src="./scripts/disable_dragging.js"></script>
+		<link href="./assets/base.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	
 	
 	<body>
-		<!-- Display the document heading. -->
-		<header class="no-select no-drag" id="site-header">
-			<div id="belt">
-				<h1>404 : Resource Not Found</h1>
+		<header>
+			<div aria-hidden="true" id="__katty-container">
+				<img draggable="false" type="image/png" src="./assets/images/Katty/emblem.png" />
 			</div>
+			<h1>404 : Page Does Not Exist</h1>
 		</header>
 		
-		
-		
-		<!-- Simple message saying the error. -->
 		<main id="site-body">
-			<div>
-				<p>
-					The URL you entered
-					(<span class="code-text italic" id="url-placeholder">[...]</span>)
-					can not be found here.<br/>
-					<a tabindex="1" href="./index.html">Home</a>
-				</p>
-			</div>
+			<p>
+				The URL you were trying to visit
+				<span><span class="code" id="__url-placeholder"></span></span>
+				can not be found here.
+			</p>
 		</main>
 		
+		<nav id="navpanel">
+			<div id="hotlinks">
+				<a aria-label="Back to homepage." href="./">Back to homepage.</a>
+			</div>
+		</nav>
+		
+		<footer>
+			<span draggable="false">
+				View the code from the GitHub repository,
+				<a tabindex="-1" href="https://github.com/CalinZBaenen/calinzbaenen.github.io">CalinZBaenen/calinzbaenen.github.io</a>.
+			</span>
+		</footer>
 		
 		
-		<!-- Fill in the URL placeholder with the location the user tried to go. -->
-		<script language="javascript" type="application/javascript">
+		
+		<!-- Insert the URL of the document the user was trying to access. -->
+		<script>
 			try {
-				document.getElementById("url-placeholder").innerText =
-					document.location.href;
+				const url = document.getElementById("__url-placeholder");
+				url.innerText = document.location.href;
+				url.outerHTML = `(${url.outerHTML})`;
 			} catch(e) {
-				console.log(`${e.name}: ${e.message}`);
+				console.error(`${e.name}: ${e.message}`);
 			}
 		</script>
 	</body>

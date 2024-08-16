@@ -1,11 +1,12 @@
 /*  Disable selection for undraggable areas.  */
-*[draggable="false"], *[draggable="false"] * {
+*[draggable="false"],  nav#navpanel {
 	-webkit-user-select:none;
 	-moz-user-select:-moz-none;
 	-moz-user-select:none;
 	-ms-user-select:none;
 	user-select:none;
 	-webkit-user-drag:none;
+	user-drag:none;
 }
 
 
@@ -33,4 +34,4 @@ a:active,  a:focus,  a:hover {
 
 
 
-footer a,  nav#navpanel { outline:none; }
+nav#navpanel a { outline:none; }
