@@ -1,0 +1,18 @@
+.full-width { width:100%; }
+
+.p-indent {
+	margin-left:2ch;
+	display:inline;
+}
+
+.grid {
+	display:-moz-grid;
+	display:-ms-grid;
+	display:grid;
+}
+
+.col {
+	-ms-flex-direction:column;
+	flex-direction:column;
+	grid-auto-flow:column;
+}

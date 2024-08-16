@@ -1,0 +1,36 @@
+/*  Disable selection for undraggable areas.  */
+*[draggable="false"], *[draggable="false"] * {
+	-webkit-user-select:none;
+	-moz-user-select:-moz-none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-user-drag:none;
+}
+
+
+
+/*  Make images pixelated.  */
+img {
+	-ms-interpolation-mode:nearest-neighbor;
+	image-rendering:-moz-crisp-edges;
+	image-rendering:-o-crisp-edges;
+	image-rendering:crisp-edges;
+}
+
+/*  Make link underlines dashed by default.  */
+a {
+	text-decoration:underline;
+		-moz-text-decoration-style:dashed;
+		text-decoration-style:dashed;
+}
+
+/*  Make link underlines solid when selected.  */
+a:active,  a:focus,  a:hover {
+	-moz-text-decoration-style:solid;
+	text-decoration-style:solid;
+}
+
+
+
+footer a,  nav#navpanel { outline:none; }

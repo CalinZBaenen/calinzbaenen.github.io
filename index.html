@@ -57,9 +57,6 @@
 				grid-template-columns:repeat(3, 2rem);
 				grid-auto-columns:2rem;
 				grid-auto-rows:2rem;
-				display:-moz-grid;
-				display:-ms-grid;
-				display:grid;
 				margin:0 auto;
 				gap:5px;
 			}
@@ -91,16 +88,18 @@
 		</header>
 		
 		<nav draggable="false" data-nosnippet id="navpanel">
-			<div class="flex col">
+			<div class="flex col" id="hotlinks">
 				<a aria-label="Projects" href="./projects/">Projects</a>
 				<a aria-label="Resources" href="./resources/">Resources</a>
 				<a aria-label="Legacy Content" href="./legacy/">Legacy Content</a>
 				<a aria-label="Achievements" href="./achievements/">Achievements</a>
 			</div>
+			
 			<div class="spacer"></div>
-			<div class="flex col">
+			
+			<div class="full-width flex col">
 				<p aria-level="2" role="heading">Social Media</p>
-				<div id="__social-media">
+				<div class="grid" id="__social-media">
 					<a target="_blank" title="GitHub (@CalinZBaenen)" href="https://github.com/CalinZBaenen">
 						<img type="image/svg+xml" alt="GitHub" src="./assets/images/favicons/github.svg" />
 					</a>
@@ -131,23 +130,21 @@
 		
 		
 		<main>
-			<!-- “Who am I?” explains who I am. (I want to leave a good impression!) -->
 			<section>
 				<h2>Who am I?</h2>
 				<p>
-					Hello! I'm Calin Baenen – also known as KattyTheEnby – a pansexual, enby, a
-					<span id="my-age">programmer that was born on October 30th, 2006</span>.
-					
-					I enjoy playing games, helping people, and programming as my hobby and
-					hope to make it my career.<br/>
-					<br/>
-					I work in programming languages such as
+					Hello! I'm Calin Baenen – also known as KattyTheEnby – a pansexual and nonbinary
+					<span id="my-age">programmer that was born on October 30th, 2006</span>.<br />
+					I enjoy programming, helping people, and, occasionally, playing games.
+				</p>
+				<p>
+					Programming is a hobby I find fun, and I hope to make it my career.<br />
+					I can program in languages such as
 					<a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>,
-					<a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>,
 					<a href="https://en.wikipedia.org/wiki/The_C%2B%2B_Programming_Language">C++</a>,
 					<a href="https://en.wikipedia.org/wiki/Rust_(programming_language)">Rust</a>,
-					and others!<br/>
-					<span style="margin-left:1.23vw;">(My favorite is Rust.)</span>
+					and others!<br />
+					<span class="p-indent">(My favorite is Rust.)</span>
 				</p>
 			</section>
 		</main>
