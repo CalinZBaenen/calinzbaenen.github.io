@@ -81,6 +81,7 @@ main,  nav#navpanel {
 
 main {
 	grid-area:m;
+	outline:none;
 	padding:0 2rem;
 }
 
@@ -132,7 +133,10 @@ h1,  h2,  h3,  h4,  h5,  h6,  *[role="heading"] {
 	width:100%;
 }
 
-#hotlinks a { display:inline-block; }
+#hotlinks a,  #hotlinks button.a-like {
+	display:inline-block;
+	cursor:pointer;
+}
 
 
 
@@ -147,9 +151,11 @@ nav#navpanel {
 
 nav#navpanel > *:last-child { margin-bottom:auto; }
 
-nav#navpanel a { padding:1.5px; }
+nav#navpanel a,  nav#navpanel button.a-like { padding:1.5px; }
 
-nav#navpanel a:active,  nav#navpanel a:focus,  nav#navpanel a:hover {
+nav#navpanel a:active,  nav#navpanel a:focus,  nav#navpanel a:hover,
+nav#navpanel button.a-like:active,  nav#navpanel button.a-like:focus,
+nav#navpanel button.a-like:hover {
 	background:goldenrod;
 	text-align:center;
 	color:black;
@@ -176,7 +182,7 @@ nav#navpanel a:active,  nav#navpanel a:focus,  nav#navpanel a:hover {
 		grid-template-rows:max-content 2fr 1fr max-content;
 	}
 	
-	#hotlinks a { text-align:center; }
+	#hotlinks a,  #hotlinks button.a-like { text-align:center; }
 	
 	nav#navpanel {
 		max-width:unset;

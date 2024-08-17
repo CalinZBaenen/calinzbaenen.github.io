@@ -66,9 +66,9 @@
 			try {
 				const url = document.getElementById("__url-placeholder");
 				url.innerText = document.location.href;
-				url.outerHTML = `(${url.outerHTML})`;
+				url.outerHTML = '('+url.outerHTML+')';
 			} catch(e) {
-				console.error(`${e.name}: ${e.message}`);
+				console.error(e.name + ": " + e.message);
 			}
 		</script>
 	</body>

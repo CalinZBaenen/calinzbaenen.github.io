@@ -20,18 +20,28 @@ img {
 }
 
 /*  Make link underlines dashed by default.  */
-a {
+a,  button.a-like {
 	text-decoration:underline;
 		-moz-text-decoration-style:dashed;
 		text-decoration-style:dashed;
 }
 
 /*  Make link underlines solid when selected.  */
-a:active,  a:focus,  a:hover {
+a:active,  a:focus,  a:hover,  button.a-like:active,
+button.a-like:focus,  button.a-like:hover {
 	-moz-text-decoration-style:solid;
 	text-decoration-style:solid;
 }
 
 
 
-nav#navpanel a { outline:none; }
+#skip-to-content:not(:focus-within) {
+	position:relative;
+	z-index:-1;
+	height:0;
+	margin:0;
+}
+
+
+
+nav#navpanel a,  nav#navpanel button.a-like { outline:none; }

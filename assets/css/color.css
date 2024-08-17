@@ -16,7 +16,9 @@
 
 
 
-footer a,  nav#navpanel a {
+footer a,  nav#navpanel a,  nav#navpanel button.a-like {
+	background:transparent;
+	font-size:1em;
 	color:hotpink;
 	color:var(--color-hotpink);
 }
