@@ -25,7 +25,7 @@
 
 
 /*  Full-width.  */
-footer,  header,  body,  html,  main,  #hotlinks a { width:100%; }
+footer,  header,  body,  html,  main,  #hotlinks > li,  #hotlinks a { width:100%; }
 
 /*  Flexible containers.  */
 footer,  header,  main,  nav,  #__katty-container {
@@ -61,12 +61,11 @@ body,  html,  #hotlinks {
 }
 
 body {
-	grid-template-columns:max-content 1fr;
-	grid-template-areas:
-		"h h"
-		"n m"
-		"n f";
-	grid-template-rows:max-content 1fr max-content;
+	grid-template:
+		"h h" auto
+		"n m" 1fr
+		"n f" auto /
+		auto 1fr;
 	font-family:Arial, sans-serif;
 	display:-moz-grid;
 	display:-ms-grid;
@@ -128,10 +127,7 @@ h1,  h2,  h3,  h4,  h5,  h6,  *[role="heading"] {
 
 #hotlinks { list-style:none; }
 
-#hotlinks > li {
-	margin:0 auto 4px;
-	width:100%;
-}
+#hotlinks > li { margin:0 auto 4px; }
 
 #hotlinks a,  #hotlinks button.a-like {
 	display:inline-block;
@@ -177,9 +173,11 @@ nav#navpanel button.a-like:hover {
 	}
 	
 	body {
-		grid-template-columns:1fr;
-		grid-template-areas:"h" "m" "n" "f";
-		grid-template-rows:max-content 2fr 1fr max-content;
+		grid-template:
+			"h" auto
+			"m" 2fr
+			"n" 1fr
+			"f" auto;
 	}
 	
 	#hotlinks a,  #hotlinks button.a-like { text-align:center; }
