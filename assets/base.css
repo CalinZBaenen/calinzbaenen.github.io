@@ -53,7 +53,7 @@ header {
 
 header > h1 { margin:auto; }
 
-body,  html,  nav#navpanel { height:100%; }
+body,  html,  nav#__navpanel { height:100%; }
 
 body,  html,  #hotlinks {
 	padding:0;
@@ -72,7 +72,7 @@ body {
 	display:grid;
 }
 
-main,  nav#navpanel {
+main,  nav#__navpanel {
 	-ms-flex-direction:column;
 	flex-direction:column;
 	grid-auto-flow:column;
@@ -136,7 +136,7 @@ h1,  h2,  h3,  h4,  h5,  h6,  *[role="heading"] {
 
 
 
-nav#navpanel {
+nav#__navpanel {
 	overflow-wrap:break-word;
 	grid-area:n;
 	max-width:10em;
@@ -145,13 +145,13 @@ nav#navpanel {
 	padding:2px 4px;
 }
 
-nav#navpanel > *:last-child { margin-bottom:auto; }
+nav#__navpanel > *:last-child { margin-bottom:auto; }
 
-nav#navpanel a,  nav#navpanel button.a-like { padding:1.5px; }
+nav#__navpanel a,  nav#__navpanel button.a-like { padding:1.5px; }
 
-nav#navpanel a:active,  nav#navpanel a:focus,  nav#navpanel a:hover,
-nav#navpanel button.a-like:active,  nav#navpanel button.a-like:focus,
-nav#navpanel button.a-like:hover {
+nav#__navpanel a:active,  nav#__navpanel a:focus,  nav#__navpanel a:hover,
+nav#__navpanel button.a-like:active,  nav#__navpanel button.a-like:focus,
+nav#__navpanel button.a-like:hover {
 	background:goldenrod;
 	text-align:center;
 	color:black;
@@ -182,13 +182,13 @@ nav#navpanel button.a-like:hover {
 	
 	#hotlinks a,  #hotlinks button.a-like { text-align:center; }
 	
-	nav#navpanel {
+	nav#__navpanel {
 		max-width:unset;
 		padding:2px 0;
 		width:100%;
 	}
 	
-	nav#navpanel > #hotlinks {
+	nav#__navpanel > #hotlinks {
 		margin:auto;
 		width:max-content;
 	}

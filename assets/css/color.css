@@ -10,20 +10,22 @@
 	--color-charcoal:#181818;
 	--color-asphalt:#24241C;
 	--color-hotpink:#E954C1;
+	--color-mustard:#FFDB58;
 	--color-butter:#EEEE98;
 	--color-grape:#681275;
+	--color-lemon:#EAEA1F;
 }
 
 
 
-footer a,  nav#navpanel a,  nav#navpanel button.a-like {
+footer a,  nav#__navpanel a,  nav#__navpanel button.a-like {
 	background:transparent;
 	font-size:1em;
 	color:hotpink;
 	color:var(--color-hotpink);
 }
 
-footer,  nav#navpanel {
+footer,  nav#__navpanel {
 	background:black;
 	color:white;
 }
@@ -31,9 +33,37 @@ footer,  nav#navpanel {
 header {
 	background:khaki;
 	background:var(--color-butter);
+	color:black;
 }
 
 body {
 	background:pink;
 	background:var(--color-cherryblossom);
+}
+
+
+
+
+
+@media (prefers-color-scheme:dark) {
+	header {
+		background:goldenrod;
+		background:var(--color-mustard);
+	}
+	
+	body {
+		background:purple;
+		background:var(--color-grape);
+		color:white;
+	}
+	
+	a:visited {
+		color:orange;
+		color:var(--color-orangepeel);
+	}
+	
+	a:link {
+		color:gold;
+		color:var(--color-lemon);
+	}
 }

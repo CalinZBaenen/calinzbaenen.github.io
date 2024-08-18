@@ -1,5 +1,5 @@
 /*  Disable selection for undraggable areas.  */
-*[draggable="false"],  nav#navpanel {
+*[draggable="false"],  nav#__navpanel {
 	-webkit-user-select:none;
 	-moz-user-select:-moz-none;
 	-moz-user-select:none;
@@ -44,4 +44,4 @@ button.a-like:focus,  button.a-like:hover {
 
 
 
-nav#navpanel a,  nav#navpanel button.a-like { outline:none; }
+nav#__navpanel a,  nav#__navpanel button.a-like { outline:none; }
