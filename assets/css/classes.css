@@ -1,3 +1,10 @@
+.mini-margins {
+	margin-bottom:10px;
+	margin-bottom:0.75ch;
+	margin-top:10px;
+	margin-top:0.75ch;
+}
+
 .full-width { width:100%; }
 
 .p-indent {

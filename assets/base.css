@@ -35,6 +35,7 @@ footer,  header,  main,  nav,  #__katty-container {
 	display:flex;
 }
 
+/*  Footer styling.  */
 footer {
 	min-height:20px;
 	grid-area:f;
@@ -46,6 +47,7 @@ footer > .spacer {
 	--y-margin:auto;
 }
 
+/*  Header styling.  */
 header {
 	border-bottom:1px solid black;
 	grid-area:h;
@@ -53,13 +55,19 @@ header {
 
 header > h1 { margin:auto; }
 
+/*  Full-height.  */
 body,  html,  nav#__navpanel { height:100%; }
 
+/*  No margins nor padding.  */
 body,  html,  #hotlinks {
 	padding:0;
 	margin:0;
 }
 
+/*  No max-height.  */
+body,  html { max-height:none; }
+
+/*  Body styling.  */
 body {
 	grid-template:
 		"h h" auto
@@ -72,18 +80,28 @@ body {
 	display:grid;
 }
 
+/*  Column items.  */
 main,  nav#__navpanel {
 	-ms-flex-direction:column;
 	flex-direction:column;
 	grid-auto-flow:column;
 }
 
+/*  Main-content styling.  */
 main {
+	line-height:1.25;
 	grid-area:m;
 	outline:none;
 	padding:0 2rem;
 }
 
+main p {
+	padding-right:1em;
+	padding-left:1em;
+	max-width:100ch;
+}
+
+/*  Heading styling.  */
 h1,  h2,  h3,  h4,  h5,  h6,  *[role="heading"] {
 	font-weight:bold;
 	font-weight:900;
@@ -91,22 +109,22 @@ h1,  h2,  h3,  h4,  h5,  h6,  *[role="heading"] {
 
 
 
+/*  A visual spacer.  */
 .spacer {
 	--x-margin:auto;
 	--y-margin:auto;
 	
 	visibility:hidden !important;
 	height:0 !important;
-	margin:auto auto !important;
+	margin:0 0 !important;
 	margin:var(--y-margin) var(--x-margin) !important;
 	width:0 !important;
 }
 
 
 
+/*  Container for the Katty emblem.  */
 #__katty-container {
-	justify-content:center;
-	align-items:center;
 	max-height:48px;
 	min-height:24px;
 	max-width:48px;
@@ -125,6 +143,7 @@ h1,  h2,  h3,  h4,  h5,  h6,  *[role="heading"] {
 	width:auto;
 }
 
+/*  Hotlinks-menu styling.  */
 #hotlinks { list-style:none; }
 
 #hotlinks > li { margin:0 auto 4px; }
@@ -136,6 +155,7 @@ h1,  h2,  h3,  h4,  h5,  h6,  *[role="heading"] {
 
 
 
+/*  Navigation-panel styling.  */
 nav#__navpanel {
 	overflow-wrap:break-word;
 	grid-area:n;
@@ -165,6 +185,7 @@ nav#__navpanel button.a-like:hover {
 	footer {
 		-ms-flex-direction:column;
 		flex-direction:column;
+		height:max-content;
 	}
 	
 	footer > .spacer {
@@ -172,10 +193,12 @@ nav#__navpanel button.a-like:hover {
 		--y-margin:1rem;
 	}
 	
+	body, html { height:auto; }
+	
 	body {
 		grid-template:
 			"h" auto
-			"m" 2fr
+			"m" 3fr
 			"n" 1fr
 			"f" auto;
 	}
@@ -189,7 +212,7 @@ nav#__navpanel button.a-like:hover {
 	}
 	
 	nav#__navpanel > #hotlinks {
-		margin:auto;
+		margin:15px auto;
 		width:max-content;
 	}
 }
